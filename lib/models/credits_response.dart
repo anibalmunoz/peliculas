@@ -58,7 +58,7 @@ class Cast {
   String? job;
 
   get fullProfilePath {
-    if (fullProfilePath != null) return "https://image.tmdb.org/t/p/w500$fullProfilePath";
+    if (profilePath != null) return "https://image.tmdb.org/t/p/w500$profilePath";
     return "https://us.123rf.com/450wm/koblizeek/koblizeek2205/koblizeek220500290/koblizeek220500290.jpg?ver=6";
   }
 
