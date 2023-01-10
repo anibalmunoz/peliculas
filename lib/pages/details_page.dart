@@ -113,7 +113,7 @@ class _Overview extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 45),
       child: Text(
         descriptionText,
         textAlign: TextAlign.justify,

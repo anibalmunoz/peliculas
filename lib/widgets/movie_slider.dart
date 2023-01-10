@@ -34,7 +34,7 @@ class _MovieSliderWidgetState extends State<MovieSliderWidget> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 260,
+      height: 300,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         if (widget.title != null)
           Padding(
@@ -47,7 +47,8 @@ class _MovieSliderWidgetState extends State<MovieSliderWidget> {
             controller: scrollController,
             scrollDirection: Axis.horizontal,
             itemCount: widget.movies.length,
-            itemBuilder: (context, index) => _MoviePoster(movie: widget.movies[index],heroId: "${widget.title}-$index"),
+            itemBuilder: (context, index) =>
+                _MoviePoster(movie: widget.movies[index], heroId: "${widget.title}-$index"),
           ),
         ),
       ]),

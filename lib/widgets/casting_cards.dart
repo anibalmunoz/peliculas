@@ -18,7 +18,7 @@ class CastingCards extends StatelessWidget {
             return Container(
               margin: const EdgeInsets.only(bottom: 30),
               width: double.infinity,
-              height: 180,
+              height: 220,
               child: const Center(child: CupertinoActivityIndicator()),
             );
           }
@@ -26,7 +26,7 @@ class CastingCards extends StatelessWidget {
           return Container(
             margin: const EdgeInsets.only(bottom: 30),
             width: double.infinity,
-            height: 180,
+            height: 220,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: cast!.length,
@@ -46,11 +46,11 @@ class _CastCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10),
       width: 110,
-      height: 100,
+      height: 125,
       child: Column(children: [
         ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child:  FadeInImage(
+            child: FadeInImage(
               placeholder: const AssetImage("assets/no-image.jpg"),
               image: NetworkImage(actor.fullProfilePath),
               height: 140,
@@ -58,6 +58,13 @@ class _CastCard extends StatelessWidget {
               fit: BoxFit.cover,
             )),
         const SizedBox(height: 5),
+        Text(
+          actor.character ?? "",
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontWeight: FontWeight.bold),
+        ),
         Text(
           actor.name,
           maxLines: 2,
