@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
     final moviesProvider = Provider.of<MoviesProvider>(context, listen: true);
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Peliculas en cines"),
+          title: const Text("Peliculas en cines", style: TextStyle(color: Colors.white)),
           elevation: 0,
           actions: [
             IconButton(
