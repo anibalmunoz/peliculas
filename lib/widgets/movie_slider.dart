@@ -6,7 +6,7 @@ class MovieSliderWidget extends StatefulWidget {
   final List<Movie> movies;
   final String? title;
   final Function onNextPage;
-  const MovieSliderWidget({Key? key, required this.movies, this.title, required this.onNextPage}) : super(key: key);
+  const MovieSliderWidget({super.key, required this.movies, this.title, required this.onNextPage});
 
   @override
   State<MovieSliderWidget> createState() => _MovieSliderWidgetState();

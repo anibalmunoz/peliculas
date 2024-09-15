@@ -3,7 +3,7 @@ import 'package:peliculas/models/movie.dart';
 import 'package:peliculas/widgets/widgets.dart';
 
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({Key? key}) : super(key: key);
+  const DetailsPage({super.key});
   static const routeName = "details";
 
   @override
@@ -88,13 +88,13 @@ class _PosterAndTittle extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(movie.title, style: textTheme.headline5, overflow: TextOverflow.ellipsis, maxLines: 2),
-              Text(movie.originalTitle, style: textTheme.subtitle1, overflow: TextOverflow.ellipsis, maxLines: 2),
+              Text(movie.title, style: textTheme.headlineSmall, overflow: TextOverflow.ellipsis, maxLines: 2),
+              Text(movie.originalTitle, style: textTheme.titleMedium, overflow: TextOverflow.ellipsis, maxLines: 2),
               Row(
                 children: [
                   const Icon(Icons.star_outline, size: 15, color: Colors.grey),
                   const SizedBox(width: 5),
-                  Text(movie.voteAverage.toString(), style: textTheme.caption),
+                  Text(movie.voteAverage.toString(), style: textTheme.bodySmall),
                 ],
               )
             ],
@@ -117,7 +117,7 @@ class _Overview extends StatelessWidget {
       child: Text(
         descriptionText,
         textAlign: TextAlign.justify,
-        style: textTheme.subtitle1,
+        style: textTheme.titleMedium,
       ),
     );
   }
